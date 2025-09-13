@@ -4,7 +4,10 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'ChatLink — Simple Video Calls for Creators',
   description: 'Host paid, time‑boxed video calls. Share a link and start earning.',
-  metadataBase: new URL(process.env.APP_URL || 'http://localhost:3000'),
+  metadataBase: new URL(
+    process.env.APP_URL ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+  ),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -19,4 +22,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
-
