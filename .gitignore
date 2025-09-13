@@ -1,0 +1,11 @@
+# BMAD (local only)
+.bmad-core/
+.bmad-*/
+
+# Node/Next.js
+node_modules/
+.next/
+.vercel/
+coverage/
+dist/
+*.log
