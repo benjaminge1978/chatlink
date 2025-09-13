@@ -45,7 +45,7 @@ export default async function Page() {
         <p className="mt-2 text-brand/80">
           Email/password sign‑up arrives in Story 1.2. For now, join the waitlist.
         </p>
-        <form className="mt-6 max-w-md" action="#" onSubmit={(e) => e.preventDefault()} aria-label="Waitlist form">
+        <form className="mt-6 max-w-md" action="#" aria-label="Waitlist form">
           <label htmlFor="email" className="block text-sm font-medium text-brand">
             Email address
           </label>

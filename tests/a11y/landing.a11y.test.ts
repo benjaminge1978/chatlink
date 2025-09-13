@@ -24,7 +24,7 @@ describe('Landing page accessibility', () => {
       }
     })
 
-    const seriousOrWorse = results.violations.filter(v => v.impact === 'serious' || v.impact === 'critical')
+    const seriousOrWorse = (results.violations as any[]).filter((v: any) => v.impact === 'serious' || v.impact === 'critical')
     expect(seriousOrWorse).toHaveLength(0)
   })
 })
