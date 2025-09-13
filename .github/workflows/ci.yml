@@ -24,10 +24,12 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Lint
+        run: npm run lint --silent
+
       - name: Run tests
         run: npm test -- --reporter=dot
 
       - name: Prisma validate (if schema exists)
         run: |
           if [ -f prisma/schema.prisma ]; then npx prisma validate; else echo "No prisma schema yet"; fi
-
